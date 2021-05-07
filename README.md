@@ -6,7 +6,9 @@ To Run the Application, run `ng serve --open` or `npm run start`
 
 To Run Unit tests, run `ng test`.  Tests are written in Jasmine with the Karma runner
 
-To Run End to End Tests, run `ng e2e`.
+To build the docker container, run `docker build --pull --rm -f "DockerFile" -t nuvalenceaddressbook:latest "."`
+
+To Run the new docker container, run `docker run --rm -it -p 8080:80 nuvalenceaddressbook:latest`
 
 ## Project Summary
 
@@ -39,6 +41,8 @@ This would probably take 5 hours plus unit tests
 ### Localization
 It would probably only take a few hours at most to add localization support, but adding the different languages would be an ongoing project as languages are requested
 
+### End To End tests are broken out of the box
+As shipped, ng11 has broken protractor tests.  Given time, I would attempt to fix them and implement at least 80% coverage
 
 
 
