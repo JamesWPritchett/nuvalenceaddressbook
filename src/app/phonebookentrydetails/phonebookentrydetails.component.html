@@ -1,0 +1,22 @@
+<mat-card *ngIf="(phoneBookEntry$ | async) as phoneBookEntry else unknownusername">
+    <mat-card-header>
+      <mat-card-title>{{phoneBookEntry.name.last}}, {{phoneBookEntry.name.first}} {{phoneBookEntry.name.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="phoneBookEntry.picture.large" alt="Photo of {{phoneBookEntry.name.last}}, {{phoneBookEntry.name.first}}">
+    <mat-card-content>
+      <p>
+        <span class="material-icons">smartphone</span> {{phoneBookEntry.cell}}
+      </p>
+      <p>
+        <span class="material-icons">phone</span> {{phoneBookEntry.phone}}
+      </p>
+      <p>
+        <span class="material-icons">email</span> {{phoneBookEntry.email}}
+      </p>
+      <p>
+        <span class="material-icons">home</span> {{phoneBookEntry.location.street.number}} {{phoneBookEntry.location.city}}, {{phoneBookEntry.location.state}}, {{phoneBookEntry.location.country}} {{phoneBookEntry.location.postcode}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <ng-template #unknownusername>Unknown Username: {{username}}</ng-template>

@@ -1,0 +1,10 @@
+<mat-nav-list>
+    <mat-list-item [routerLink]="['/entries', entry.login.username]" *ngFor="let entry of phonebookentriesService.entries | async" [routerLinkActive]="'active'">
+
+        <img matListAvatar [src]="entry.picture.thumbnail"
+            alt="thumbnail for {{ entry.name.last }}, {{ entry.name.first }}">
+        <h3 matLine> {{ entry.name.last }}, {{ entry.name.first }} {{ entry.name.title }} </h3>
+
+    </mat-list-item>
+
+</mat-nav-list>

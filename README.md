@@ -1,27 +1,44 @@
-# NuvalenceAddressBook
+# Nuvalence Address Book
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+## Running and Testing application
 
-## Development server
+To Run the Application, run `ng serve --open` or `npm run start`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To Run Unit tests, run `ng test`.  Tests are written in Jasmine with the Karma runner
 
-## Code scaffolding
+To Run End to End Tests, run `ng e2e`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Project Summary
 
-## Build
+This application was scaffolded using the Angular 11 CLI.  
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+I chose the material library for the UI controls because of my familarity with it and it comes with some easy to implement themes to get me to MVP quicker.
 
-## Running unit tests
+I implemented a sidebar list that has thumbnails.  This sidebar stays open for larger screens and auto-collapses when the screen size is less than 600px wide.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The details page is on a route that's loaded by clicking on the user's name from the sidebar
 
-## Running end-to-end tests
+## If more time was available
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Type Safety
+I would create an interface for the user objects being returned via the api so that I wouldn't be using any as the type.  
+This would take about 3 hours to investigate and implement
 
-## Further help
+### Resolver for Detail Page
+I would add a resolver for the detail page to validate the querystring parameter and show a different page if the user isn't found
+This would take about an hour plus unit tests
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Preview for the sidebar items.  
+When you hover over the people on the sidebar, I would add a popup that shows phone numbers.
+This would probably take about an hour plus unit tests
+
+### Paging, Sorting and Filtering
+I would have added the ability to page through a variable set of items per page, filter the list by name/address/phone# and sort the results. Currently, the list size is hardcoded to 20 entries.
+This would probably take 5 hours plus unit tests
+
+### Localization
+It would probably only take a few hours at most to add localization support, but adding the different languages would be an ongoing project as languages are requested
+
+
+
+

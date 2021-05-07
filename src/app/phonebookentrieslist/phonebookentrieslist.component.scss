@@ -1,0 +1,7 @@
+
+/* Show an indicator on the selected item */
+mat-list-item.active {
+    ::before {
+        content:">>"
+    }
+}
